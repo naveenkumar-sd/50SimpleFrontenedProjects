@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Manufacturing+Consent&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    font-family: "Bitcount Grid Double", system-ui;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+h1:hover{
+    cursor: pointer;
+}
+
