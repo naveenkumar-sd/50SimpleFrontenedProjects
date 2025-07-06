@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormAttributes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <form action="https://example.com/submit" method="POST" autocomplete="on">
+
+        <h1>Sample form</h1>
+
+
+        <!-- lable with for and input with id -->
+        <div class="form-group">
+            <label for="fullname">Full Name:</label><br />
+            <input type="text" id="fullname" name="Full Name" placeholder="Enter your full name" required autofocus>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-group">
+            <label for="email">Email Address:</label><br />
+            <input type="email" id="email" name="Email" placeholder="example123@gmail.com" required>
+        </div>
+
+        <!-- select dropdown with default selected -->
+        <div class="form-group">
+            <label for="country">Select which country you are:</label>
+            <select name="country_select" id="country">
+                <option value="">--choose--</option>
+                <option value="in" selected>India</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+        </div>
+
+
+        <!-- Radio buttons with same name -->
+        <div class="form-group">
+
+            <label>Gender:</label><br />
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label><br />
+
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label></br>
+        </div>
+
+        <!-- text area field -->
+        <div class="form-group">
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="4" placeholder="Type your message..."></textarea>
+        </div>
+
+        <!-- disabled input  -->
+        <div class="form-group">
+            <label for="referral">Referral code:</label><br />
+            <input type="text" id="referral" name="referral" value="xyz123" disabled />
+        </div>
+
+        <!-- checkbox with checked -->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="subscribe" value="yes" checked />
+                <label>subscribe to newsletter</label>
+            </label>
+        </div>
+
+        <div class="buttondiv">
+            <button type="submit">SUBMIT</button>
+        </div>
+
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
