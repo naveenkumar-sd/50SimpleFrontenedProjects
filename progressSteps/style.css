@@ -83,6 +83,7 @@ body{
 
 .btn:active{
     transform: scale(0.98);
+    border-color: white;
 }
 
 .btn:focus{
