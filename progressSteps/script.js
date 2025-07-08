@@ -55,6 +55,33 @@ function colorfill(){
 }
 
 
+// for round container 
+
+const progressRound = document.getElementById('progressRound')
+const round1 = document.getElementById('roundcircle1')
+const roundprev = document.getElementById('roundprev')
+const roundnext = document.getElementById('roundnext')
+
+let angle = 0;
+
+roundnext.addEventListener('click',()=>{
+    if(angle<360){
+        angle += 90;
+        updatecircle();
+    }
+})
+
+roundprev.addEventListener('click',()=>{
+    if(angle>0){
+        angle -=90;
+        updatecircle();
+    }
+})
+
+function updatecircle(){
+    progressRound.style.background = `conic-gradient(green ${angle}deg,white ${angle}deg)`;
+    round1.textContent = `${(angle/360)*100}%`;
+}
 
 
 

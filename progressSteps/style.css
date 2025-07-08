@@ -11,7 +11,8 @@ body{
     background-color: lightsteelblue;
     font-family:monospace;
     display: flex;
-    justify-self: center;
+    flex-direction:column ;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
@@ -26,9 +27,9 @@ body{
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 30px;
     max-width: 100%;
     width: 350px;
+    margin: 0 auto 30px;
 }
 
 .progress-container::before{
@@ -94,3 +95,28 @@ body{
     background-color: var(--line-border-empty);
     cursor: not-allowed;
 }
+
+/* progress steps for round circle  */
+
+.round-container{
+   text-align: center;
+   margin-top:2.5rem;
+}
+
+.round-progress-container{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(green 0deg, #ddd 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 2.5rem;
+    margin:20px ;
+    transition: background 3s cubic-bezier(0.25, 1, 0.5, 1);         
+}
+
+
+
