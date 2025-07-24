@@ -1,0 +1,34 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: radial-gradient(circle,#556ff0,#6762a8,#bb72ec,#e578b6,#e46791,#e67474,#F56040,#f5f5a2,#edc893,#ead296);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.counter{
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+@media (max-width:580px) {
+    body{
+        flex-direction: column;
+    }
+}
