@@ -1,0 +1,21 @@
+ CREATE PROCEDURE EmpData()
+    BEGIN
+    DECLARE done INT DEFAULT false;
+    DECLARE empid INT;
+    DECLARE empname varchar(200);
+    DECLARE empdpt varchar(200);
+    DECLARE empsalary DECIMAL(10,2);
+    DECLARE cur CURSOR FOR
+             SELECT id,name,department,salary FROM employees;
+    DECLARE CONTINUE HANDLER for NOT FOUND
+             SET done = true;
+    OPEN cur;
+    read_loop:LOOP
+             FETCH cur INTO empid,empname,empdpt,empsalary;
+    IF done THEN
+    Leave read_loop;
+    END if;
+    SELECT empid AS ID,empname AS NAME,empdpt AS DEPARTMENT,empsalary AS SALARY ;
+    END LOOP;
+    CLOSE cur;
+    END//
