@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="big-container ">
+        <div class="container ">
+            <h1>Select Your Weapon</h1>
+            <div class="weapons">
+                <div class="hands stone" id="stone">
+                    <img src="img/stone.png" alt="stone">
+                    <p for="stone">STONE</p>
+                </div>
+
+                <div class="hands paper" id="paper">
+                    <img src="img/paper.png" alt="paper">
+                    <p for="paper">PAPPER</p>
+                </div>
+
+                <div class="hands scissor" id="scissor">
+                    <img src="img/scissor.png" alt="scissor">
+                    <p for="scissor">SCISSOR</p>
+                </div>
+            </div>
+
+            <button class="btn">START</button>
+        </div>
+
+        <div class="scores" id="scores">
+            <div class="bing won" id="won">
+                <label for="won">WON-</label> 55
+            </div>
+
+            <div class=" bing loss" id="loss">
+                <label for="won">LOSS-</label> 55
+            </div>
+
+            <div class="bing draw" id="draw">
+                <label for="won">DRAW-</label> 55
+            </div>
+
+        </div>
+
+        <div class="result-container" style="display: none;" >
+            <div class="result-box">
+                <div class="player your-choice">
+                    <h2>You chose</h2>
+                    <img id="player-img" src="img/paper.png" alt="your choice">
+                    <p id="player-text"></p>
+                </div>
+                <div class="player computer-choice">
+                    <h2>Computer chose</h2>
+                    <img id="computer-img" src="img/scissor.png" alt="computer choice">
+                    <p id="computer-text"></p>
+                </div>
+            </div>
+            <button  class="exit-btn" id="exit-btn">ONE MORE</button>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
