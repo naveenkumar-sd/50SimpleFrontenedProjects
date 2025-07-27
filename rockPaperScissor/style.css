@@ -20,6 +20,7 @@ body{
 .big-container{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     /* justify-content: center; */
     /* align-items: center; */
 }
@@ -28,6 +29,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 h1{
@@ -152,13 +154,34 @@ h1{
     height: 200px;
 }
 
-.result-box .your-choice img{
+.result-box .your-choice img {
+    position: relative;
+    left: -150px;
+    opacity: 0;
     transform: rotate(70deg);
+    transition: all 0.7s ease-in-out;
+}
+
+/* Final state: visible and in position */
+.result-box.active .your-choice img {
+    left: 0;
+    opacity: 1;
 }
 
 .result-box .computer-choice img{
+    position: relative;
+    right: -150px;
+    opacity: 0;
     transform: rotate(-70deg);
+    transition: all 0.7s ease-in-out;
 }
+
+.result-box.active .computer-choice img{
+    right: 0;
+    opacity: 1;
+}
+
+
 .exit-btn{
     background-color: #fff;
     color: #3b6a8c;
@@ -174,6 +197,8 @@ h1{
 .exit-btn:active{
     transform:scale(0.99)
 }
+
+
     
     
 
