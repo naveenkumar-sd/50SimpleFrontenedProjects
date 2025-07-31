@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, black,white,black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.image-container .dice img{
+    height: 200px;
+    width: 200px;
+    
+}
+
+.image-container{
+    display: flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dice{
+    position: absolute; 
+    top: -300px;
+    left: -100px; 
+}
+
+
+/* .dice.active img{
+    animation: spin 1.5s linear forwards;
+} */
+
+.dice.active{
+    opacity: 1;
+    
+}
+
+.dice{
+    opacity: 0;
+    
+}
+
+.dice.spin{
+    animation: spin 1.5s linear forwards;
+}
+
+p{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+ @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+.btn1{
+    
+    background: rgb(0, 0, 0);
+    border: none;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
