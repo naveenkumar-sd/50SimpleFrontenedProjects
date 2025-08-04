@@ -42,12 +42,17 @@ body{
 }
 
 
-/* .dice.active img{
-    animation: spin 1.5s linear forwards;
-} */
+.dice.active img{
+    animation: spin 0.5s linear forwards;
+}
+
+.dice.active p{
+    animation: spin2 0.5s linear forwards;
+}
 
 .dice.active{
     opacity: 1;
+
     
 }
 
@@ -56,9 +61,7 @@ body{
     
 }
 
-.dice.spin{
-    animation: spin 1.5s linear forwards;
-}
+
 
 p{
     text-align: center;
@@ -67,10 +70,34 @@ p{
 }
 
  @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
+     0% {
+      transform: rotate3d(1, 1, 1, 0deg);
     }
+    49.999% {
+      transform: rotate3d(1, 1, 1, 1080deg);
+    }
+    50% {
+      transform: rotate3d(1, 1, 1, 0deg);
+    }
+    100% {
+      transform: rotate3d(1,1, 1, 1080deg);
+    }
+}
+
+@keyframes spin2{
+   
+
+     0% {
+      transform:rotateY(0deg);
+    }
+   
+    50% {
+        transform:rotatey(540deg);
+    }
+    100% {
+      transform:rotatex(1080deg);
+    }
+}
 
 
 .btn1{

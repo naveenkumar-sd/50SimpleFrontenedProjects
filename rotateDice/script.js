@@ -9,10 +9,15 @@ btnroll.addEventListener('click',()=>{
         randomIndex = Math.floor(Math.random()*dices.length)
         console.log(randomIndex)
 
+        dices.forEach(dice => {
+            dice.classList.add('active');
+        },1000);
+
         removeclass();
+
         setTimeout(()=>{
             const choice = dices[randomIndex].classList.add('active');
-        },500)
+        },100)
 
 })
 
@@ -27,7 +32,7 @@ function removeclass(){
         dice.classList.remove('spin');
     });
 
-    },500)
+    },100)
     
 
 }

@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: none;
+}
+
+.container{
+    background: rgb(28, 28, 28);
+    min-height: 55vh;
+    padding: 10px 15px;
+    border-radius: 10px;
+    
+}
+
+.container input{
+    margin-top: 10px;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(64, 61, 61);
+    color: #fff;
+    text-align: end;
+    font-size: xx-large;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: rgb(64, 61, 61);
+}
+
+.for-btns{
+    margin-top: 15px;
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px ;
+      
+}
+
+.for-btns button{
+     background: rgb(28, 28, 28);
+     color: #fff;
+     border: none;
+     font-size: 1.5rem;
+}
+
+.symbols{
+    color: orange !important;
+    font-weight: bolder;
+}
+
+
+
+.equalto{
+    grid-row: span 2;
+    background-color: orange !important;
+    border-radius: 5px;
+}
+
+.equalto:active{
+    background: rgb(242, 193, 102) !important;
+}
+
+
+.zero{
+    /* background: #fff !important; */
+    grid-column: 2/2;
+}
+
+
